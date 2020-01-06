@@ -15,7 +15,7 @@ func ReceiveFile(w http.ResponseWriter, r *http.Request) {
 	file, handler, err := r.FormFile("image")
 	if err != nil {
 		http.Error(w, "Bad Request", 400)
-		return // jangan lupa tambahkan return
+		return
 	}
 	defer file.Close()
 
