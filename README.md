@@ -11,3 +11,8 @@ go run upload-server.go # for running the server
 google-chrome upload-file.html # choose file, then upload
 # and see where the file goes
 ```
+
+## Some link that might help you
+
+1. https://codenoid.github.io/posts/cara-install-golang-di-linux/
+2. https://verbositis.com/arbitrary-file-upload-vulnerability/
